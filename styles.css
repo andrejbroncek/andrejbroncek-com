@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  color: #fff;
+  background-color: #000;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.hover_img a {
+  position: relative;
+}
+.hover_img a span {
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
+.hover_img a:hover span {
+  display: block;
+}
+
+summary div {
+  color: #808080;
+}
+
+#title:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@media (min-width: 760px) {
+  :root {
+    --columns: 4;
+    --offset: 100px;
+    --gutter: 20px;
+    --spacing: 200px;
+  }
+
+  #resume {
+    margin: var(--offset);
+  }
+
+  #resume section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: var(--spacing);
+    margin-bottom: 12vw;
+  }
+
+  #resume h1 {
+    grid-column: span 2;
+  }
+
+  #resume h2 {
+    grid-column: span 1;
+  }
+
+  #resume .timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: var(--spacing);
+    margin-bottom: 12vw;
+  }
+
+  #resume .contact {
+    display: block;
+    position: fixed;
+    left: var(--offset);
+    bottom: 0px;
+  }
+}
+
+@media (max-width: 759px) {
+  :root {
+    --columns: 2;
+    --offset: 30px;
+    --gutter: 20px;
+    --spacing: 60px;
+  }
+
+  #resume {
+    margin: var(--offset);
+  }
+
+  #resume section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+
+  #resume h2 {
+    grid-column: span 1;
+  }
+
+  #resume .timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: var(--spacing);
+  }
+
+  #resume .contact {
+    padding-bottom: var(--offset);
+  }
+}
+
+/* Type */
+
+@media (min-width: 2560px) {
+  body {
+    font-size: 32px;
+  }
+
+  h1 {
+    font-size: 180px;
+    line-height: 140%;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  body {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 7vw;
+    line-height: 140%;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 6.5vw;
+    line-height: 140%;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1439px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 6vw;
+    line-height: 140%;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 959px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 6.5vw;
+    line-height: 140%;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-position: under;
+}
